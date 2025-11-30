@@ -25,7 +25,7 @@ double thrustToWeightRatio(int engineThrust,int numberOfEngines, double aircraft
 }
 
 
-
+    
 // ----------- MAIN FUNCTION ----------- //
 
 
@@ -34,9 +34,10 @@ int main() {
     GE9X.engineWeight = 9800;
     GE9X.thrust = 455000; //Newtons
 
-
+    std::cout << "The gravity at that altitude is: " << gravity(9.81, 200000, 6371000) << std::endl;
     std::cout << "The TOW is: " << takeOffWeight(GE9X.engineWeight) << std::endl;
     std::cout << "The Thrust/Weight ratio is: " << thrustToWeightRatio(GE9X.thrust, 2, takeOffWeight(GE9X.engineWeight)) << std::endl;
+
     
     // Retorna 0 para indicar que o programa rodou com sucesso
     return 0;
